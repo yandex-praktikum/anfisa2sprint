@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+  Анфиса для друзей. Мороженое {{ ice_cream.name|lower }}
+{% endblock %}
+{% block content %}
+  <h1 class="border-bottom pb-2 mb-0">{{ ice_cream.name }}</h1>  
+  <div class="row mt-3">
+    <div class="col-12 col-md-6">
+      <h2>Описание</h2>
+      <p>{{ ice_cream.description }}</p>      
+    </div> 
+    <div class="col-12 col-md-6 mb-3">
+      <img 
+        class="img-fluid" 
+        height="400" width="300"
+        src="{% static 'img/image-holder.png' %}"
+        >      
+    </div>
+  </div>     
+{% endblock %}
+ 
