@@ -4,23 +4,23 @@ from core.models import PublishedModel
 
 
 class Category(PublishedModel):
-    name = models.CharField(max_length=200)
-    slug = models.SlugField(max_length=200)
+    name = models.CharField(max_length=256)
+    slug = models.SlugField(max_length=64)
     weight = models.PositiveSmallIntegerField(default=100)
 
 
 class Topping(PublishedModel):
-    name = models.CharField(max_length=200)
-    slug = models.SlugField(max_length=200)
+    name = models.CharField(max_length=256)
+    slug = models.SlugField(max_length=64)
 
 
 class Wrapper(PublishedModel):
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=256)
 
 
 class IceCream(PublishedModel):
     is_on_main = models.BooleanField(default=False)
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=256)
     description = models.TextField()
     wrapper = models.OneToOneField(
         Wrapper,
