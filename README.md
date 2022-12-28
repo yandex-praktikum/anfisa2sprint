@@ -15,18 +15,11 @@ Cоздать и активировать виртуальное окружен�
 Windows
 ```
 python -m venv venv
-```
-Linux/macOS
-```
-python3 -m venv venv
-```
-
-Windows
-```
 source venv/Scripts/activate
 ```
 Linux/macOS
 ```
+python3 -m venv venv
 source env/bin/activate
 ```
 
