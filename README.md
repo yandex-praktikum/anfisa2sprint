@@ -3,27 +3,40 @@
 Клонировать репозиторий и перейти в него в командной строке:
 
 ```
-git clone 
+git clone https://github.com/yandex-praktikum/anfisa2sprint.git
 ```
 
 ```
-cd 
+cd anfisa2sprint
 ```
 
 Cоздать и активировать виртуальное окружение:
 
+Windows
 ```
-python3 -m venv env
+python -m venv venv
 ```
+Linux/macOS
+```
+python3 -m venv venv
+```
+
 Windows
 ```
 source venv/Scripts/activate
 ```
-linux/MacOS
+Linux/macOS
 ```
 source env/bin/activate
 ```
 
+Обновить PIP
+
+Windows
+```
+python -m pip install --upgrade pip
+```
+Linux/macOS
 ```
 python3 -m pip install --upgrade pip
 ```
@@ -36,6 +49,13 @@ pip install -r requirements.txt
 
 Выполнить миграции:
 
+Windows
+```
+python manage.py makemigrations
+python manage.py migrate
+```
+
+Linux/macOS
 ```
 python3 manage.py makemigrations
 python3 manage.py migrate
@@ -43,6 +63,12 @@ python3 manage.py migrate
 
 Запустить проект:
 
+Windows
+```
+python manage.py runserver
+```
+
+Linux/macOS
 ```
 python3 manage.py runserver
 ```
